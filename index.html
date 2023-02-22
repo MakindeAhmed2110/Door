@@ -1,0 +1,448 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+    <link href="https://fonts.cdnfonts.com/css/be-vietnam-pro" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import 'animate.css';
+    </style>
+   </head>
+  <body>
+    <section class="sec">
+        <button type="direction" class="way" onclick="topFunction()" id="myBtn">
+            <svg version="1.1"  id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve" fill="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="16" y1="6" x2="16" y2="28"></line> <polyline fill="none" this stroke-width="2" stroke-miterlimit="10" points="7.5,14 16,5.5 24.5,14 "></polyline> </g>
+         </svg>
+        </button>
+        <div class="preloader"><h2>This is a Frontend Case-study <span><br> by Makinde Ahmed </span></h2></div>
+    <div class="container"> <!--Acting as NAV-->
+        <div id="navbar2" class="navbar"> <!--acting as WRAPPER-->
+            <button class="btn-logo">D</button>
+            <div class="brand-name">DOOR</div>
+             
+            <nav> <!--Acting as a super-class for nav-links-->
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                <ul class="nav-links"> <!--Our nav-links-->
+                    <label for="close-btn" class="btn close-btn"><i class="fa fa-times"></i></label>  
+
+                    <li>
+                        <a href="#" class="desktop-item">Home</a>
+                        <input type="checkbox" id="showDrop">
+                        <label for="showDrop" class="mobile-item">Home</label>
+                        <ul class="drop-menu" id="dropdown">
+                            <li>Business Consulting</li>
+                            <li>Business Consulting 02</li>
+                            <li>Corporate</li>
+                            <li>Fintech</li>
+                            <li>Company</li>
+                            <li>Business</li>
+                            <li>Finance</li>
+                        </ul>
+                    </li>
+                   
+                    <li><a href="#">About</a></li>
+                    
+                    <li>
+                        
+                        <a href="#" class="desktop-item">Elements</a>
+                       <div class="mega-box">
+                        <div class="contented">
+                            <div class="row">
+                                <ol class="mega-links">
+                                    <li>Button</li>
+                                    <li>Service</li>
+                                    <li>Counter</li>
+                                    <li>Progress Bar</li>
+                                    <li>Accordion</li>
+                                    <li>Social Share</li>
+                                    <li>Blog Grid</li>
+                                 </ol>
+                            </div>
+                          
+                            <div class="row">
+                                 <ol class="mega-links">
+                                    <li>Team</li>
+                                    <li>Portfolio</li>
+                                    <li>Testimonial</li>
+                                    <li>Timeline</li>
+                                    <li>Tab</li>
+                                    <li>Pricing</li>
+                                    <li>Split section</li>
+                                 </ol>
+                            </div>
+                         
+                            <div class="row">
+                                 <ol class="mega-links">
+                                    <li>Call To Action</li>
+                                    <li>Video</li>
+                                    <li>Gallery</li>
+                                    <li>Contact</li>
+                                    <li>Brand</li>
+                                    <li>Portfolio</li>
+                                    <li>404</li>
+                                 </ol>
+                            </div>
+                       
+                            <div class="row">
+                                 <ol class="mega-links">
+                                    <li>Advance Tab<button>hot</button></li>
+                                    <li> Brand Carousel<button>New</button></li>
+                                    <li>Advance Pricing</li>
+                                    <li>Portfolio Details</li>
+                                    <li>Blog Details</li>
+                                    <li>404 Page</li>
+                                 </ol>
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-item">Blog</a>
+                        <input type="checkbox" id="showDrop">
+                        <label for="showDrop" class="mobile-item">Blog</label>
+                        <ul class="drop-menu" id="dropdown">
+                            <li>Blog Grid</li>
+                            <li>Blog Grid Sidebar</li>
+                            <li>Blog List View</li>
+                            <li>Blog List View Sidebar</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-item">Portfolio</a>
+                        <input type="checkbox" id="showDrop">
+          <label for="showDrop" class="mobile-item">Portfolio</label>
+                       <ul class="drop-menu" id="dropdown">
+                            <li>Portfolio Default</li>
+                            <li>Portfolio Three Column</li>
+                            <li>Portfolio Full width</li>
+                            <li>Portfolio Grid Layout</li>
+                            <li>Portfolio Box Layout</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                    <li><button type="button" class=" button-one">Buy Now<img src="images/arrow.png"></button></li>
+                    <li class="toggle fa-rotate-270 toggle-one"></li>
+                </ul>
+            </nav>
+            <button type="button" class=" button-two">Buy Now<img src="images/arrow.png"></button>
+            <label for="menu-btn" class="btn menu-btn"><i class="fa fa-bars"></i></label>
+            <span class="fa-rotate-270 toggletwo"></span>
+        </div>
+        <div class="content">
+            <h4>DIGITAL CONSULTING AGENCY</h4>
+            <h1 class="fancy">Unique Business Consulting.</h1>
+            <div class="help">We help our clients succeed by creating brand <br> identities, digital experiences and print materials</div>
+           <div class="btn-action">
+            <button type="button" class="btn-purchase">Purchase Now <i class="fas fa-arrow-right"></i></button>
+            <button type="button" class="btn-contact">Contact Us</button>
+           </div>
+        </div>
+    </div>
+    
+   
+    <div class="contain">
+  
+    <!--For company offers-->
+    <div class="offers">
+        <div class="offers-one">
+            <div class="offer-icon"><i class="fa fa-pen-nib"></i></div>
+            <div class="offers-one-header">Awarded Design</div>
+            <span>There are many variations<br> variations of passages of Lorem<br> Ipsum available, but the majority<br> have suffered.</span>
+        </div>
+        <div class="offers-two">
+            <div class="offer-icon"><i class="fa fa-layer-group"></i></div>
+            <div class="offers-one-header">Design & Creative</div>
+            <span>Passages there are many<br> variations variations of of Lorem<br> Ipsum available, but the majority <br>have suffered.</span>
+        </div>
+        <div class="offers-three">
+            <div class="offer-icon"><i class="far fa-map"></i></div>
+            <div class="offers-one-header">App Development</div>
+            <span>Variations There are many<br> variations of passages of Lorem<br> Ipsum available, but the majority <br>have suffered.</span>
+       </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="clients working">
+        <div class="headers">
+            <div class="first-header"><span>Working Process</span></div>
+            <div class="main-header">Business Working Process.</div>
+            <div class="header-impt">We provide company and finance services for<br> startup and company business</div>
+        </div>
+        <div class="working-process">
+           
+                <div class="working-body">
+                    <div class="working-content">
+                       <div class="step">Step-1</div>
+                       <div class="working-header"><h1>Your working process you can present.</h1></div>
+                       <p>Lorem ipsum dolor sit amet at — consectetur adipisicing elit. Hic, expedita. Incidunt laboriosam.</p>
+                       <div class="gains">
+                          <div class="gain-one">
+                             <h2>Gain your works</h2>
+                             <p>Lorem ipsum dolor sit amet at consectetur adipisicing</p>
+                          </div>
+                          <div class="gain-two">
+                            <h2>Working process</h2>
+                            <p>Lorem ipsum dolor sit amet at consectetur adipisicing</p>
+                          </div>
+                       </div>
+                       <button type="button">Get started now</button>
+                    </div>
+                    <div class="working-image">
+                        <img src="images/book.jpg">
+                    </div>
+                </div>
+
+             <div class="process-one">
+                <div class="circle"></div>
+                <div class="circle" style="animation-delay: 0s"></div>
+                <div class="circle" style="animation-delay: 1s"></div>
+                <div class="circle" style="animation-delay: 2s"></div>
+                <div class="circle" style="animation-delay: 3s"></div>
+             </div>
+
+             <div class="working-body">
+                <div class="working-content">
+                   <div class="step">Step-2</div>
+                   <div class="working-header"><h1>Our company working process to present.</h1></div>
+                   <p>Lorem ipsum dolor sit amet at — consectetur adipisicing elit. Hic, expedita. Incidunt laboriosam.</p>
+                   <div class="gains">
+                      <div class="gain-one">
+                         <h2>Follow this process</h2>
+                         <p>Lorem ipsum dolor sit amet at consectetur adipisicing</p>
+                      </div>
+                      <div class="gain-two">
+                        <h2>Working experience</h2>
+                        <p>Lorem ipsum dolor sit amet at consectetur adipisicing</p>
+                      </div>
+                   </div>
+                   <button type="button">Get started now</button>
+                </div>
+                <div class="working-image">
+                    <img src="images/book2.webp">
+                </div>
+            </div>
+   
+            <div class="process-two">
+                <div class="circle"></div>
+                <div class="circle" style="animation-delay: 0s"></div>
+                <div class="circle" style="animation-delay: 1s"></div>
+                <div class="circle" style="animation-delay: 2s"></div>
+                <div class="circle" style="animation-delay: 3s"></div>
+            </div>
+        </div>
+        <div class="watch">
+            <div class="svg-contain" data-aos="fade-right"><svg viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>multimedia / 9 - multimedia, play icon</title> <g id="Free-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"> <g transform="translate(-749.000000, -379.000000)" id="Group" stroke="#fff" stroke-width="2"> <g transform="translate(745.000000, 376.000000)" id="Shape"> <path d="M5,4.67805648 C5,4.56284567 5.03231968,4.44953549 5.09390785,4.34882312 C5.29405709,4.02152811 5.74836552,3.90360587 6.10863414,4.08543644 L20.6160344,11.4074417 C20.7378493,11.4689227 20.8382812,11.5601626 20.9059562,11.6708284 C21.1061054,11.9981234 20.976303,12.4108512 20.6160344,12.5926818 L6.10863414,19.9146871 C5.99777542,19.9706384 5.87304972,20 5.7462319,20 C5.3340994,20 5,19.6964791 5,19.322067 L5,4.67805648 Z"> </path> </g> </g> </g> </g></svg></div>
+            <h2>Watch the creative process behind<br>
+            the digital marketing.</h2>
+        </div>
+    </div>
+    <hr class="divider">
+
+    <div class="clients">
+        <div class="headers">
+            <div class="first-header"><span>Client Feedback</span></div>
+            <div class="main-header">Our Clients Feedback.</div>
+            <div class="header-impt">We provide company and finance services for<br> startup and company business.</div>
+        </div>
+
+        <div class="body-wrapper slider">
+
+            <input type="radio" class="radio" name="images" id="radio-1">
+            <input type="radio" class="radio" name="images" id="radio-2">
+            <input type="radio" class="radio" name="images" id="radio-3">
+
+
+        <div class="clients-body slide number" id="slide-1">
+            <div class="client-body-one"  data-aos="fade-right" data-aos-delay="300">
+               <div class="client-country">Germany</div>
+               <div class="client-review">What I am  primarily looking  for 
+                with new projects is a fit on both the visual and asthetic level
+                and as well on a personal level with the clients.
+                </div>
+                <div class="client-name">Makinde A.</div>
+                <div class="client-job">Web Developer</div>
+            </div>
+            <div class="clients-body-image" data-aos="fade-left">
+                <img src="images/360-1.jpg">
+            </div>
+        </div>
+        <div class="clients-body slide" id="slide-2">
+            <div class="client-body-one" data-aos="fade-right" data-aos-delay="300">
+               <div class="client-country">Nigeria</div>
+               <div class="client-review">What I am  primarily looking  for 
+                with new projects is a fit on both the visual and asthetic level
+                and as well on a personal level with the clients.
+                </div>
+                <div class="client-name">Olakunle A.</div>
+                <div class="client-job">App Developer</div>
+            </div>
+            <div class="clients-body-image">
+                <img src="images/profile2.jpg">
+            </div>
+        </div>
+        <div class="clients-body slide" id="slide-3">
+            <div class="client-body-one"  data-aos="fade-right" data-aos-delay="300">
+               <div class="client-country">U.S.A</div>
+               <div class="client-review">What I am  primarily looking  for 
+                with new projects is a fit on both the visual and asthetic level
+                and as well on a personal level with the clients.
+                </div>
+                <div class="client-name">Oluwatobiloba A.</div>
+                <div class="client-job">Cloud Engineer</div>
+            </div>
+            <div class="clients-body-image">
+                <img src="images/profile3.jpg">
+            </div>
+        </div>
+   
+        <div class="dots">
+            <label for="radio-1" class="radio-1" id="label-1"></label>  
+            <label for="radio-2" class="radio-2" id="label-2"></label>
+            <label for="radio-3" class="radio-3" id="label-3"></label>             
+        </div>
+       
+          
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="latest-news">
+        <div class="headers">
+            <div class="first-header"><span>Latest News</span></div>
+            <div class="main-header">Our Latest News.</div>
+            <div class="header-impt">We provide company and finance services for<br> startup and company business</div>
+        </div>
+        <div class="latest-news2">
+            <div class="card">
+                <img src="images/boy.jpg">
+                <div class="card-owner">Irin Pervin / 10 Jan 2023</div>
+                <div class="card-title">Best Corporate Tips You Will Read This Year.</div>
+            </div>
+            <div class="card-two">
+                <img src="images/card-2.jpg">
+                <div class="card-owner">Ahmed Makinde / 30 Nov 2022</div>
+                <div class="card-title">Should Fixing Corporate Take 100 Steps.</div>
+            </div>
+            <div class="card-two">
+                <img src="images/card-3.jpg">
+                <div class="card-owner">John Dow / 01 Dec 2022</div>
+                <div class="card-title">The Next 100 Things To Immediately Do About</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="purchase-menu">
+        <div class="purchase-header">Ready to start creating a standard website?</div>
+        <div class="purchase-impt">Finest choice for your home and offices</div>
+        <button type="purchase-btn">Purchase Door <img src="images/arrow.png"></button>
+    </div>
+    
+    </div>
+<div class="footer">
+    <div class="footer-component">
+        <div class="brand-footer">
+           <div class="brand"> <button class="btn-logo">D</button>
+            <div class="brand-name">DOOR</div>
+            </div>
+            <div class="brand-note"><span>Create website by door so<br> quick download and make <br> your site.</span></div>
+        </div>
+        <div class="footer-nav">
+            <div class="footer-nav1">
+                <div class="nav-1-one">
+                    <div class="nav1-header">Services</div>
+                    <ol>
+                        <li>About</li>
+                        <li>Portfolio</li>
+                        <li>Contact</li>
+                        <li>Service</li>
+                    </ol>
+                </div>
+
+                <div class="nav-1-one">
+                    <div class="nav1-header">Company</div>
+                    <ol>
+                        <li>Gallery</li>
+                        <li>About Us</li>
+                        <li>Testimonial</li>
+                        <li>Timeline</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="footer-nav2">
+                <div class="nav-2-one">
+                    <div class="nav2-header">Solutions</div>
+                    <ol>
+                        <li>Pricing</li>
+                        <li>Team</li>
+                        <li>Advance Tab</li>
+                        <li>Service</li>
+                    </ol>
+                </div>
+
+                <div class="nav-2-one">
+                    <div class="nav2-header">Resources</div>
+                    <ol>
+                        <li>Gallery</li>
+                        <li>About Us</li>
+                        <li>Testimonial</li>
+                        <li>Timeline</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="footer-email">
+            <div class="email-header">Stay With Us</div>
+            <div class="email-into">2000+ Our clients have suscribed<br> around the world</div>
+            <form>
+                <input type="text" class="email" placeholder="Enter your email here"><br>
+                <input type="button" class="button" value="submit now">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="footer-last">
+    <ul>
+        <li>Privacy Policy</li>
+        <li>Terms and Conditions</li>
+        <li>Contact Us</li>
+    </ul>
+    <div class="copyright">
+        <i class="fa fa-copyright"></i> <span>Door 2023 </span>
+    </div>
+   </div>
+   <div class="developer">Developed & Designed by
+    <span><a href="https://ahmed-media.netlify.app">Makinde-Ahmed </a></span>&#128516</div>
+</section>
+   <script src="app.js"></script>
+   <script>
+    AOS.init();
+  </script>
+   <script>
+     const sec = document.querySelector('.sec');
+        const toggle = document.querySelector('.toggle');
+        toggle.onclick = function(){
+            sec.classList.toggle('dark')
+        }
+
+        const toggletwo = document.querySelector('.toggletwo');
+        toggletwo.onclick = function(){
+            sec.classList.toggle('dark')
+        }
+   </script>
+ </body>
+ </html>

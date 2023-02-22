@@ -1,0 +1,1990 @@
+
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+section{
+    transition: background 1s ;
+    background-color: #fff;
+    background-image: linear-gradient(45deg, #57d9eda1   0%, #FFF 25%, #fffaff 72%,#f18bf657  90%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.dark{
+    background-color: black;
+    background-image: linear-gradient(45deg, #106179  0%, #000000 25%, #000000 85%,#8b353572 90%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+} 
+/* Light or white mode of the screen */
+.container{
+    width : 100%;
+    height : 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(IMAGES/Image-12.jpg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+.navbar{
+    --text: #000000;
+    --text-inverse: #f4f4f4;
+    position: fixed;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height : 80px;
+    padding: 1% 9% 0 9%;
+    --background: transparent;
+    border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    font-family: sans-serif;
+    transition: background 250ms ease-in;
+    background: var(--background);
+    color: var(--text);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.preloader{
+    height : auto;
+    position : fixed;
+    z-index : 1000;
+    background : #000000de;
+    opacity: 0.95;
+    width :cover;
+    font-family : 'be vietnam pro', sans-serif;
+    
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    height : 100vh;
+    width : 100%;
+    backdrop-filter: opacity(.5);
+    color : #fff;
+    bottom : 0;
+    transition: .5s ease;
+    text-align: center;
+    
+}
+.preloader h2{
+    font-size : 34px;
+    animation: fadeInUp;
+    animation-duration: 4s;
+    padding-top: 20px;
+}
+.preloader span{
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    animation: fadeInUp;
+    animation-duration: 4s;
+    transition: 0.5s ease;
+    color : white;
+}
+.nav-scrolled{
+    --text: #000000;
+    --text-inverse: #000000;
+    --background : #f2f2f2;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.05);
+    
+}
+.nav-scrolled a{
+    color : #000000;
+}
+
+
+.nav-scrolled .btn.menu-btn{
+    background : #8080805b;
+    padding : 10px 15px;
+    border-radius: 50%;
+}
+.nav-scrolled .navbar{
+    padding-top : 0.2%;
+}
+.navbar .btn-logo, .footer .btn-logo{
+    background : linear-gradient(to right, #d33ed3, #f071b1ec, #ff5100);
+    color : #fff;
+    border:none;
+    border-radius : 10px;
+    padding : 5px 12px;
+    font-size: 24px;
+    font-weight: 900;
+     position: relative;
+     cursor: pointer;
+    z-index: 1;
+}
+
+.btn-logo::before{
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left : 1px;
+    background-color: #000000;
+    border-radius: 25px;
+    z-index : -1;
+    transition: 200ms;
+}
+.btn-logo::after{
+    font-size: 16px;
+    background-color: transparent;
+}
+.navbar .brand-name, .footer .brand-name{
+    font-size: 28px;
+    font-weight: bold;
+    justify-content: center;
+    background: linear-gradient(to right,#0000ffa9,#F55EA9,#f5f8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left : 5px;
+    z-index:1;
+}
+.navbar .brand-name::after{
+    z-index : -1;
+}
+nav{
+    flex: 1;
+    text-align: right;
+    
+}
+nav ul li{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 3%;
+}
+nav ul li a{
+    color : #fff;
+    font-size: 16px;
+    font-family: 'be vietnam pro', sans-serif;
+    text-decoration: none;
+    
+}
+nav ul li a:hover{
+    color : #ff5ea2;
+    border: none;
+    border-radius: 5px;
+    padding : 10px 5px;
+    background : rgba(0,0,0,0.2) transparent;
+}
+nav ul li button, .navbar button{
+    padding : 10px 30px;
+    font-family: 'be vietnam pro', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color : #fff;
+    background: linear-gradient(to right, #d33ed3, #f071b1ec, #ff5100);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
+    transition: width 0.5s;
+    cursor: pointer;
+}
+.navbar button.button-two{
+    display : none;
+}
+nav ul li button img, .navbar button img{
+    width : 30px;
+   display: none;
+}
+nav ul li button:hover img{
+    display : block;
+    padding-left: 10px;
+}
+nav ul li button:hover{
+    padding: 10px 35px;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    position: relative;
+}
+
+nav ul ul{
+    position : absolute;
+    top : 85px;
+    opacity :0;
+    visibility: hidden;
+    background: #f2f2f2;
+    text-align: left;
+    list-style-type: none;
+    transition: top .5s;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-left: -20px;
+}
+nav ul ul li{
+    cursor: pointer;
+    display: list-item;
+    position: relative;
+    width : cover;
+    margin: 0px;
+    padding: 15px 15px;
+    font-family: 'be vietnam pro', sans-serif;
+    transition: all 0.5s ease;
+    
+}
+
+nav ul li:hover > ul{
+    top : 65px;
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+}
+nav ul ul li:hover{
+    background: #fff;
+    margin-left:20px ;
+    width : 80%;
+    border-radius: 5px;
+}
+.row .mega-links li:hover{
+    background: #fff;
+    margin-left:30px ;
+    width : 100%;
+    border-radius: 5px;
+    color : #000000;
+}
+
+
+.mega-box{
+    position : absolute;
+    top : 85px;
+    background : #f2f2f2;
+    width :1100px;
+    margin-left: -40%;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+   
+ }
+ .mega-box .contented{
+    transition : all .5s ease; 
+    background : #f2f2f2;
+    padding : 30px 50px;
+    display : flex;
+    width : 100%;
+    gap : 30px;
+    justify-content: space-between;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+ }
+ .contented .row{
+    line-height: 35px;
+ }
+
+ .contented .row:nth-child(1),
+ .contented .row:nth-child(2){
+    border-left: 0px;
+ }
+ .row .mega-links li{
+    padding : 0 20px;
+    color: #333;
+    font-size: 15px;
+    display : block;
+    font-family: 'Be vietnam pro', sans-serif;
+    text-align: left;
+    cursor : pointer;
+ }
+ nav ul li:hover > .mega-box{
+    top : 70px;
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+}
+.mega-box button{
+    padding : 5px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+
+.content{
+    padding-top: 18%;
+    text-align: center;
+    font-family:  sans-serif;
+}
+.content h4{
+    color : rgba(255, 255, 255, 0.91);
+    font-weight: 400;
+    font-size : 17px;
+    font-family: 'be vietnam pro', sans-serif;
+}
+.content h1{
+    color : #fff;
+    font-size: 64px;
+    padding-top : 1%;
+}
+ h1 span{
+    opacity : 0;
+    transition : all 0.4s ease;
+}
+ h1 span.fade{
+    opacity: 1;
+}
+.content .help{
+    font-weight: 100;
+    padding-top: 1%;
+    cursor: pointer;
+    text-align: center;
+    color :#d9d9d9;
+    font-size: 24px;
+    line-height: 30px;
+}
+.btn-action{
+    padding-top: 2%;
+    
+}
+.content .btn-purchase{
+    padding : 20px 37px;
+    font-size: 16px;
+    font-family: 'be vietnam pro', sans-serif;
+    font-weight : 500;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color : #fff;
+    cursor : pointer;
+    background: linear-gradient(to right, #d33ed3, #f071b1ec, #ff5100);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content .btn-purchase:hover{
+    background: linear-gradient(to left, #d33ed3, #f071b1ec, #ff5100);
+    transition: 0.5s ease;
+}
+.content .btn-contact{
+    padding : 20px 37px;
+    cursor : pointer;
+    font-size: 16px;
+    border: 1px solid #fffa;
+    border-radius: 30px;
+    color : #fff;
+    background: transparent;
+    transition: border .3s;
+}
+.btn-contact:hover{
+    background: #f071b1ec;
+    border : 2px solid #f071b035;
+}
+
+
+
+.contain{
+   margin: 5% 8%;
+}
+
+
+
+
+.offers{
+    display : flex;
+    justify-content: space-between;
+    margin: 100px 50px 100px 50px;
+}
+.offers-one, .offers-two, .offers-three{
+    transition: 0.5s transform ease;
+}
+.offers-one:hover, .offers-two:hover, .offers-three:hover{
+    transform: translateY(-10px);
+}
+.offers .offers-one-header{
+    font-family: 'Be vietnam pro', sans-serif;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 14px;
+    cursor : pointer;
+}
+.offers-one-header:hover{
+    color : #ff5ea2;
+    transition: 1s ease;
+}
+.offers-one .offer-icon{
+    height: 90px;
+    content: "";
+    width: 90px;
+    border : none;
+    border-radius : 50%;
+    background : #57ede320;
+    text-align: center;
+    padding-top : 25px;
+    color : #57caed;
+    font-weight: 200;
+    font-size: 34px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+.offers-two .offer-icon{
+    height: 90px;
+    content: "";
+    width: 90px;
+    padding-top: 25px;
+    border : none;
+    border-radius : 50%;
+    background : #fa540712;
+    text-align: center;
+    color : #fa7407d8;
+    font-weight: 200;
+    font-size: 34px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.offers-three .offer-icon{
+    height: 90px;
+    content: "";
+    width: 90px;
+    padding-top: 25px;
+    font-size: 34px;
+    border : none;
+    border-radius : 50%;
+    background : #5644f52c;
+    color : #0909d8ee;
+    font-weight: 200;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.offers span{
+    font-family: 'be vietnam pro', sans-serif;
+    font-size: 18px;
+    color:rgba(0, 0, 0, 0.563);
+    text-align: center;
+    display: block;
+    line-height: 30px;
+}
+
+
+
+.working .working-process{
+    margin : 80px auto;
+    border-left : 5px solid #80808020;
+    height : fit-content;
+    z-index: 999;
+}
+.process-one{
+    padding-top: 50px;
+    position: relative;
+    z-index: 999;
+}
+.process-two{
+    padding-top: 50px;
+    padding-bottom: -50px;
+    position: relative;
+    z-index: 999;
+}
+.process-one .circle, .process-two .circle {
+    border-radius: 50%;
+    background-color: deepskyblue;
+    width: 50px;
+    height:50px;
+    z-index: -1;
+    position: absolute;
+    opacity: 1;
+    margin-top: -42px;
+    margin-left: -28px;
+    animation: scaleIn 2s infinite cubic-bezier(.36, .11, .89, .32);
+
+  }
+  @keyframes scaleIn {
+    from {
+      transform: scale(.5, .5);
+      opacity: .5;
+    }
+    to {
+      transform: scale(2.5, 2.5);
+      opacity: 0;
+    }
+  }
+ .working-process .process-one::before,.working-process .process-two::before{
+    content :'';
+    display : block;
+    width : 20px;
+    height : 20px;
+    border-radius: 50%;
+    background-color : #4d4df2bc;
+    border : 7px solid #ddd;
+    top : 50px;
+    margin-top: -400px;
+    margin-left: -20px;
+}
+.working-process .working-body{
+    display : flex;
+    justify-content: space-between;
+    gap : 10px;
+    background: #8080801a;
+    height : fit-content;
+    padding : 5%;
+    margin-left: 100px;
+    border: none;
+    border-radius: 17px;
+}
+.working-body .working-content{
+    font-family: 'Be vietnam pro', sans-serif;
+}
+.working-content .step{
+    font-family: Arial;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 300;
+    color : #33333387;
+    letter-spacing: 0.05em;
+}
+.working-content .working-header{
+    font-size: 28px;
+    margin-top : 30px;
+}
+.working-content p{
+    padding-top :30px;
+    font-size: 16px;
+    font-weight : 400;
+    line-height : 28px;
+    color : #333333a8;
+}
+.working-content .gains{
+    display: flex;
+    gap : 10px;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.working-content .gains h2{
+    font-size : 18px;
+    font-weight: 700;
+}
+.working-content .gains p{
+    padding-top : 15px;
+   
+}
+.working-content button{
+    margin-top: 40px;
+    padding : 17px 38px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #834283, #d33ed3, #f071b1ec, #ff5100);
+    background-repeat: no-repeat;
+    color : #fff;
+    background-size: cover;
+    font-family: 'Be vietnam pro', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.working-content button:hover{
+    background: linear-gradient(to right, #834283 0%, #cf57cf 20%, #f071b1ec 40%, #ff5100);
+    box-shadow: 0 0 7px 7px #f071b045;
+    transition : linear 0.2s;
+}
+.working-body .working-image{
+    border : none;
+    height: fit-content;
+    width: fit-content;
+    padding : 12% 9% ;
+    background :#333;
+    border-radius: 20px;
+}
+.dark .working-body .working-image{
+    background : #000000;
+}
+.working-body .working-image img{
+    height : 300px;
+    width : 300px;
+}
+.watch{
+    width : 100%;
+    height : 520px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(IMAGES/laptop.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding-top: 300px;
+    padding-left: 70px;
+}
+.watch h2{
+    color :#fff;
+   font-family: 'be vietnam pro', sans-serif;
+   padding-top :20px;
+   font-size : 32px;
+   font-weight: 700;
+}
+.watch .svg-contain{
+    border : none;
+    background :linear-gradient(to right, #d33ed3, #f071b1ec, #ff5100 );
+    height : 70px;
+    width : 70px;
+    padding-top :20px;
+    padding-left : 22px;
+    position : relative;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.watch svg{
+    height : 30px;
+    width : 30px;
+    
+}
+
+.clients, .latest-news{
+    display : block;
+    position : relative;
+    margin : 90px auto;
+}
+ .latest-news, .clients .headers{
+    text-align: center;
+    font-family: 'Be vietnam pro', sans-serif;
+}
+ .clients .headers .first-header,
+ .latest-news .headers .first-header{
+    width : 160px;
+    height : 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background: #8080801a;
+}
+ .clients .headers .first-header span,
+ .latest-news .headers .first-header span{
+    font-size: 18px;
+    font-family: 'be vietnam pro', sans-serif;
+    padding-top: 5px;
+    display: block;
+    font-weight: 530;
+    background: linear-gradient(to right,#0000ffd5,#F55EA9,rgba(255, 85, 255, 0.679));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ .clients .headers .main-header,
+ .latest-news .headers .main-header{
+    font-size: 44px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+ .clients .headers .header-impt,
+ .latest-news .headers .header-impt{
+    font-size: 18PX ;
+    font-family: 'be vietnam pro', sans-serif; 
+    padding-top: 15px;
+    line-height: 30px;
+    color :#7b7878;
+}
+
+.clients-body{
+    display: flex;
+    padding : 100px 100px 70px 100px;
+    gap : 20px;
+    font-family: 'be vietnam pro',sans-serif;
+}
+.clients-body .client-country{
+    text-transform:uppercase ;
+    font-size : 18px;
+}
+.clients-body .client-review{
+    padding-top : 30px;
+    font-family : arial;
+    font-weight:-100px;
+    font-size : 32px;
+    line-height : 50px;
+    color :#2e2a2ab3;
+}
+.clients-body .client-name{
+    padding-top : 25px;
+    font-size : 20px;
+    font-weight: 500;
+}
+.clients-body .client-job{
+    padding-top : 15px;
+    font-style: italic;
+}
+
+.clients-body i{
+    color :#f2f2f27e;
+    padding-left: 10px;
+}
+.clients-body .clients-body-image img{
+   height : 350px;
+   width  : 350px;
+   border-radius: 50%;
+   border : 10px solid;
+ }
+ .radio {
+    display : none;
+ }
+
+ .slider{
+    width : 100%;
+    position : relative;
+    height : 0;
+    padding-top : 56%;
+    background: transparent;
+    overflow :hidden;
+}
+.slide{
+    position: absolute;
+    top : 0;
+    left : 0;
+   opacity : 0;
+}
+.slide img{
+    transform : scale(1.1);
+    transition: 1.3s;
+}
+.dots{
+    width : 100%;
+    position : absolute;
+    bottom : 5%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+.dots label{
+    width : 15px;
+    height : 15px;
+    background : #333333cb;
+    margin : 0 10px;
+    border-radius: 50%;
+    cursor : pointer;
+    transition : 0.2s ease-in-out;
+}
+#radio-1:checked ~  .dots #label-1,
+#radio-2:checked ~ .dots #label-2,
+#radio-3:checked ~ .dots #label-3{
+    background : transparent;
+    border : 2px solid rgba(0, 149, 255, 0.654);
+    height : 20px;
+    width : 20px;
+    opacity : 1;
+}
+.number,
+#radio-1:checked ~ #slide-1,
+#radio-2:checked ~ #slide-2,
+#radio-3:checked ~ #slide-3
+{
+opacity : 1;
+}
+#radio-1:checked ~ #slide-1 img,
+#radio-2:checked ~ #slide-2 img,
+#radio-3:checked ~ #slide-3 img{
+  transform : scale(1);
+}
+#radio-2:checked ~ .number,
+#radio-3:checked ~ .number{
+    display : none;
+}
+
+
+.latest-news2{
+    margin-top : 50px;
+    text-align: left;
+    display : flex;
+    justify-content: space-between;
+}
+.latest-news .latest-news2 .card, .latest-news .latest-news2 .card-two {
+    width : 350px;
+    height : fit-content;
+    border : none;
+    background: #80808020;
+    border-radius: 10px;
+    transition: background .3s ease-in;
+}
+.card img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 230px;
+    -webkit-transform : scaleX(-1);
+    transform : scaleX(-1);
+}
+ .card-two  img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 230px;
+ }
+.card .card-owner, .card-two .card-owner {
+    padding-top: 20px;
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #7b7878e8;
+}
+.card .card-title,  .card-two .card-title {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    font-size: 21px;
+    font-weight: 600;
+    transition: all .3s ease-in;
+}
+
+.purchase-menu{
+    border: none;
+    border-radius: 10px;
+    width: cover;
+    height : 300px;
+    overflow-x: hidden;
+    text-align: center;
+    display : block;
+    background: #ffffffb8;
+    background-image: linear-gradient(50deg, #80808020 0%,  #80808020 72%, #f071b035 90%);
+    padding : 3%;
+    margin: 10% auto;
+    transition : 0.5s transform ease;
+}
+.purchase-menu:hover{
+    transform: translateY(20px) translateX(20px);
+    cursor: pointer;
+}
+.purchase-menu .purchase-header{
+    font-size : 48px;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding-top: 5px;
+}
+.purchase-menu .purchase-impt{
+    padding-top: 25px;
+    font-family: 'Be vietnam pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.purchase-menu button{
+    margin-top: 35px;
+    padding : 15px 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #d33ed3, #d33ed3, #f071b1ec, #ff5100);
+    background-repeat: no-repeat;
+    color : #fff;
+    background-size: cover;
+    font-family: 'Be vietnam pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    transition: width 0.5s;
+    cursor: pointer;
+}
+.purchase-menu button img{
+    width : 20px;
+}
+
+
+.footer{
+    font-family: 'be vietnam pro', sans-serif;
+    margin-top: 4%;
+    width : 100%;
+    padding : 7% 9%;
+    background : #f2f2f2;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom:  1px solid rgba(0,0,0,0.1);
+    background-size: cover;
+    z-index: -99;
+}
+.footer-component{
+    display : flex;
+    justify-content: space-between;
+}
+.footer-nav1,.footer-nav2{
+    display: flex;
+    gap : 80px;
+    padding-top : 2%;
+}
+.nav1-header, .nav2-header{
+    font-size : 21px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+.nav2-header{
+    padding-top: 20px;
+}
+.nav-1-one ol, .nav-2-one ol{
+    padding-top: 18px;
+    line-height: 35px;
+    cursor : pointer;
+}
+.nav-1-one ol li, .nav-2-one ol li{
+    font-size: 15px;
+    font-weight: 400;
+    list-style-type: none;
+    position: relative;
+}
+.nav-1-one ol li::after, .nav-2-one ol li::after,
+.dark .nav-1-one ol li::after, .dark .nav-2-one ol li::after{
+   content : "";
+   position : absolute;
+   background : #F55EA9;
+   height : 2px;
+   width : 0;
+   left : 0;
+   bottom : 5px;
+   transition : 1s;
+}
+.nav-1-one ol li:hover, .nav-2-one ol li:hover,
+.dark .nav-1-one ol li:hover, .dark .nav-2-one ol li:hover{
+    color: #ff5ea1fd;
+}
+.nav-1-one ol li:hover::after, .nav-2-one ol li:hover::after,
+.nav-1-one ol li:hover::after, .nav-2-one ol li:hover::after{
+    width : 60%;
+}
+.footer .brand {
+    display : flex;
+    gap : 5px;
+}
+.footer .brand-name{
+    font-size: 36px;
+}
+.footer .brand-note{
+    font-size:22px;
+    padding-top: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color :#333333;
+}
+.brand-note span{
+    letter-spacing: 0.02em;
+    line-height: 35px;
+}
+.footer-email{
+    padding-right: 100px;
+}
+.footer-email .email-header{
+    font-size: 21px;
+    padding-top: 10px;
+}
+.footer-email .email-into{
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer-email form {
+    padding-top: 40px;
+}
+.footer-email form .email{
+    height : 50px;
+    width : 270px;
+    border-radius : 10px;
+    border : 2px solid #0000004d;
+    background: transparent;
+    font-size: 15px;
+    padding-left: 10px;
+    text-transform: capitalize;
+    letter-spacing: 0.05em;
+    color : #000000bd;
+    font-weight: 500;
+}
+.footer-email form .email:checked{
+    border : 2px solid #0000004d;
+}
+.footer-email form .button{
+    margin-top: 20px;
+    height: 50px;
+    width : 170px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #d33ed3, #d33ed3, #f071b1ec, #ff5100);
+    background-repeat: no-repeat;
+    color : #fff;
+    text-transform: capitalize;
+    font-size : 16px;
+    font-family : 'be vietnam pro', sans-serif;
+    cursor :pointer;
+    transition : linear 0.5s;
+}
+.footer-email form .button:hover, .purchase-menu button:hover{
+    background: linear-gradient(to right, #d33ed3 0%, #d33ed3 10%, #f071b1ec 40%, #ff5100);
+    box-shadow: 0 0 5px 5px #f071b070;
+    transition : linear 0.5s;
+}
+
+
+.footer-last{
+    display : flex;
+    padding-left : 9%;
+    padding-right : 5%;
+    padding-bottom: 2%;
+    font-family: 'be vietnam pro', sans-serif;
+    font-size: 14px;
+    justify-content: space-between;
+    padding-top : 20px;
+}
+.developer{
+    font-family : 'be vietnam pro', sans-serif;
+    font-size : 14px;
+    padding-left : 9%;
+    text-align: center;
+    padding-bottom : 10px;
+}
+.dark .developer {
+    color : #f2f2f2;
+}
+.footer-last ul{
+    display: flex;
+    gap : 10px;
+}
+.footer-last ul li{
+    list-style-type: none;
+}
+.footer-last .copyright{
+    gap : 5px;
+}
+button.way{
+    float: right;
+    border-radius: 50%;
+    border : none;
+    background:#80808050;
+    padding : 5px 10px;
+    bottom: 50px;
+    right: 20px;
+    cursor: pointer;
+    z-index : 99;
+    position: fixed;
+}
+button.way svg{
+    width : 40px;
+    height : 40px;
+    stroke: #000000;
+    animation : slideInUp;
+    animation-duration : 2s;
+    animation-iteration-count: infinite;
+}
+button.way:hover svg{
+    animation: none;
+}
+
+hr.divider{
+    /*Divider diving the offers and */
+    border : none;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+    padding-top: 30px;
+}
+
+
+.navbar .btn {
+    display: none;
+   font-size : 28px;
+   font-weight: 300;
+   cursor :pointer;
+   border : none;
+   background : #f2f2f2;
+   padding : 10px 15px;
+   border-radius: 50%;
+   
+  }
+  .navbar .btn.close-btn {
+    padding : 1px 15px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    color : #000000;
+  }
+  .dark .nav-scrolled .btn.menu-btn{
+      background : #f2f2f2;
+      padding : 10px 15px;
+      border-radius: 50%;
+  }
+  .nav-links .mobile-item {
+    display: none;
+  }
+  .navbar input{
+    display : none;
+  }
+  .navbar .toggletwo{
+    display : none;
+  }
+
+
+
+/* Dark Mode Of Screen */
+
+.navbar .toggle, .navbar .toggletwo{
+    font-size: 22px;
+    padding : 10px 15px;
+ }
+ .navbar .toggletwo{
+    position : relative;
+    float: right;
+     cursor: pointer;
+     background: #ff5100;
+    padding: 5px 10px;
+     display : none;
+     border-radius: 50%;
+     justify-content: center;
+     align-items: center;
+     margin-left: 3px;
+     z-index: -1;
+ }
+ .toggle {
+    position : relative;
+   float: right;
+    cursor: pointer;
+    background: #ff5100;
+    height: 40px;
+    width : 40px;
+    display : flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 8px;
+ }
+ section.dark .toggle, section.dark .navbar .toggletwo{
+    background: #ff5100;
+ }
+ .toggle::before, .navbar .toggletwo::before{
+    content : '\f186';
+    font-family: fontAwesome;
+    color : #fff;
+ }
+section.dark .toggle::before, section.dark .navbar .toggletwo::before{
+    content : '\f185';
+    color: #fff;
+    font-family: fontAwesome;
+ }
+.dark .nav-scrolled{
+    background: #000000;
+    border-bottom: 0.3px solid #ffffff13;
+}
+.dark .nav-scrolled .brand-namee{
+    background: linear-gradient(#fff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.dark nav ul li a{
+    color : #fff;
+}
+.dark nav ul li a:hover{
+    color : #ff5ea2;
+}
+.dark nav ul ul, .dark .mega-box .contented{
+    background : rgba(51, 51, 51, 0.934);
+    z-index: 999;
+}
+.dark nav ul ul li, .dark .mega-box li{
+    color : #fff;
+}
+
+.dark nav ul ul li:hover, .dark .mega-box li:hover{
+    color : #333;
+    background: #fff; 
+}
+ .dark .contain{
+    color: #fff;
+}
+
+
+.dark .latest-news .latest-news2 .card ,.dark .latest-news .latest-news2 .card-two {
+    background: #2b2b2b9e;
+}
+.dark .latest-news2 .card-title{
+    color: #fff;
+}
+
+.dark .purchase-menu{
+    background-image: linear-gradient(55deg,#0e4758 0%, #000000 10%,  #000000 82%, rgb(59, 44, 44) 95%);
+}
+.dark .footer{
+    background : #000000;
+    border-top: 0.5px solid #f2f2f24a;
+     border-bottom: 0.5px solid #f2f2f24a;
+}
+.dark .footer ol li,.dark .footer-last, .dark .footer form .email, .dark .email-into, .dark .brand-note{
+    color :#ffffffd2;
+}
+.dark .footer .nav1-header,.dark .nav2-header, .dark .email-header{
+    color :#fff;
+}
+.dark .footer-email input.email{
+    border : 1px solid #fff;
+}
+.dark button.way svg{
+    color : #ffff;
+    stroke: #fff;
+}
+.dark .dots label{
+    background : #fff;
+}
+.dark .offers span{
+    color : #ffffffb8;
+}
+.dark .offers-one .offer-icon{
+    background: #010c2c37;
+}
+.dark .offers-two .offer-icon {
+    background :#6418182d;
+}
+.dark .clients-body .client-review{
+    color : #f2f2f2;
+}
+.dark hr.divider{
+    border-bottom : 1px solid #f2f2f24a;
+}
+.dark .clients .headers .header-impt,
+.dark .latest-news .headers .header-impt{
+    color : #ffffffb8;
+}
+.dark .clients .pagination span{
+    background : rgba(17, 17, 17, 0.881);
+    border-radius : 80%;
+    cursor: pointer;
+ }
+ .dark .clients .pagination span.active{
+    background : transparent;
+ }
+ .dark .working-content p{
+    color : #f2f2f2;
+ }
+ .dark .working-content .step{
+    color : #f2f2f2;
+ }
+
+
+/* media queries for smaller laptops, tablet and mobile phones */
+
+@media (max-width : 1300px){
+    section{
+        background-image: linear-gradient(45deg, #57d9eda1   0%, #FFF 25%, #fffaff 62%,#f18bf657  90%);
+ 
+    }
+    .dark section{
+        background-image: linear-gradient(45deg, #106179  0%, #000000 62%, #000000 85%,#8b353572 90%);
+ 
+    }
+    .navbar{
+        padding: 1% 2% 0 4%;
+    }
+    .navbar .brand-name{
+        margin-left: 2px;
+    }
+    .content{
+        padding-top: 20%;
+    }
+    .navbar .btn-logo{
+        padding : 2px 10px;
+        margin-left: 2px;
+    }
+    .mega-box{
+        width : 92vw;
+        margin-left: -45vw;
+        
+    }
+    .mega-box .contented{
+        width : 100%;
+        display: flex;
+        gap: 5px;
+        padding : 10px 30px;
+    }
+    .contain{
+        margin : 5% 3%;
+    }
+     .offers{
+        margin: 100px auto 100px auto;
+     }
+     .purchase-menu{
+        padding : 1%;
+     }
+  
+     .purchase-menu .purchase-header{
+        font-size: 38px;
+        padding-top: 30px;
+        font-weight: 600;
+     }
+     .purchase-impt{
+        padding-top: 20px;
+     }
+    .footer {
+        padding : 5% 3%;
+    }
+    
+}
+
+
+/*Smaller Laptops*/
+
+@media (max-width :985px){
+    .purchase-menu .purchase-header{
+        font-size: 30px;
+    }
+    .purchase-menu{
+        padding : 3%;
+        width: cover;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .content{
+        padding-top : 20%;
+    }
+    .contain{
+        margin : 5% 9%;
+    }
+    .footer .footer-nav1, .footer-nav2{
+        display: flex;
+        gap : 100px;
+    }
+    .latest-news .latest-news2{
+        display: flex;
+       flex-wrap: wrap;
+       gap : 20px;
+       margin-right: auto;
+        margin-left: auto;
+    }
+    .latest-news .latest-news2 .card-two, .card{
+        display : block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .clients-body{
+        display: flex;
+        position :absolute;
+        padding : 80px 40px 0 40px;
+        gap : 20px;
+        font-family: 'be vietnam pro',sans-serif;
+    }
+    .clients-body .client-country{
+        text-transform:uppercase ;
+        font-size : 18px;
+    }
+  
+    .clients-body .client-review{
+        padding-top : 30px;
+        font-family : arial;
+        font-weight:-100px;
+        font-size : 24px;
+        line-height : 30px;
+        color :hsla(0, 5%, 17%, 0.702);
+    }
+    .clients-body .client-name{
+        padding-top : 25px;
+        font-size : 18px;
+        font-weight: 500;
+    }
+    .clients-body .client-job{
+        padding-top : 15px;
+        font-style: italic;
+    }
+
+    .clients-body .clients-body-image img{
+       height : 200px;
+       width  : 200px;
+       border-radius: 50%;
+       border : 10px solid;
+     }
+}
+
+/* For Tablets */
+@media (max-width : 890px){
+    .watch{
+        height : 350px;
+        padding-top : 150px;
+        padding-left : 50px;
+    }
+    .watch h2{
+        font-size: 4vw;
+        font-weight : 600;
+        padding-top : 10px;
+    }
+    
+.working-process .working-body{
+    flex-direction: column-reverse;
+    gap : 10px;
+    background: #8080801a;
+    width : 90%;
+    height : fit-content;
+    padding : 5%;
+    margin-left: 30px;
+    margin-right: -10px;
+}
+.working-process .working-image{
+    width : 100%;
+    padding : 20% 20% ;
+}
+.working-content .step{
+    padding-top : 30px;
+}
+.working-content .working-header{
+    font-size: 19px;
+    font-weight : 600;
+    margin-top : 20px;
+}
+.working-content p{
+    padding-top :30px;
+    font-size: 16px;
+}
+.working-content .gains{
+    display: block;
+    padding-top: 40px;
+}
+.working-content .gains h2{
+    font-size : 18px;
+    font-weight: 700;
+}
+.gain-two h2{
+    padding-top : 15px;
+}
+.working-content .gains p{
+    padding-top : 15px;
+   
+}
+    .navbar .toggle{
+        display  : none;
+    }
+    .navbar .toggletwo{
+        display : block;
+      }
+    .navbar .btn {
+        padding : 7px 12px;
+        font-size : 19px;
+    }
+     .navbar .btn.menu-btn{
+        margin-left : 5px;
+    }
+    .navbar button.button-one{
+        display : none;
+    }
+      .navbar button.button-two{
+        display: block;
+      }
+      .navbar button.button-two:hover{
+        background: linear-gradient(to right, #a632a6 0%, #d33ed3 10%, #f071b1ec 40%, #ff5100);
+        box-shadow: 0 0 5px 5px #f071b070;
+        transition : linear 0.5s;
+      }
+      nav ul li button, .navbar button.button-two{
+        padding : 10px 18px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .navbar .brand-name{
+        font-size : 22px;
+    }
+    .content{
+        padding-top: 200px;
+    }
+    .content .help{
+        padding: 15px 10px;
+        font-size: 20px;
+        font-weight : 400;
+        font-family: 'be vietnam pro', sans-serif;
+        
+    }
+    .content h4{
+        font-size: 16px;
+    }
+    .content h1{
+        font-size : 54px;
+        font-weight: 700;
+    }
+    .contain {
+        margin : 2% 3%;
+     }
+     .latest-news .latest-news2 .card, .latest-news .latest-news2 .card-two{
+        width : 500px;
+     }
+     .latest-news .latest-news2 img{
+        height : auto;
+     }
+     .purchase-menu{
+        padding-top: 2%;
+        height : 280px;
+     }
+    .offers{
+       display: flex;
+       flex-wrap: wrap;
+       gap : 50px;
+       margin-right: auto;
+        margin-left: auto;
+    }
+    .offers-three, .offers-one, .offers-two{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .clients .headers .main-header,
+    .latest-news .headers .main-header{
+        font-size : 32px;
+    }
+    .clients .headers .header-impt,
+    .latest-news .headers .header-impt{
+        text-align: center;
+    }
+    .clients .headers .header-impt br,
+    .latest-news .headers .header-impt br{
+        display : none;
+    }
+    .latest-news .latest-news2{
+        display: flex;
+       flex-wrap: wrap;
+       gap : 20px;
+       margin-right: auto;
+        margin-left: auto;
+    }
+    .latest-news .latest-news2 .card-two, .card{
+        display : block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card .card-owner, .card-two .card-owner {
+        padding-top: 20px;
+        padding-left: 15px;
+        font-size: 14px;
+    }
+    .card .card-title,  .card-two .card-title {
+        padding-top: 25px;
+        padding-left: 15px;
+        padding-bottom: 20px;
+        font-size: 19px;
+    }
+
+
+    .purchase-header{
+        font-size: 10vw;
+    }
+    .footer-component{
+        display: block;
+    }
+
+   
+    .navbar .btn {
+        display: block;
+      }
+      .navbar .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 350px;
+        top: 0;
+        left: -100%;
+        background: #fff;
+        display: inline-block;
+        padding: 70px 10px;
+        line-height: 50px;
+        overflow-y: auto;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+        transition: all 0.5s ease;
+      }
+      #menu-btn:checked~.nav-links {
+        left: 0%;
+      }
+      #menu-btn:checked~.btn.menu-btn {
+        display: none;
+      }
+      #close-btn:checked~.btn.menu-btn {
+        display: block;
+      }
+
+      
+
+      .nav-links li {
+        margin: 15px 5px;
+        display : block;
+        text-align: left;
+      }
+      .nav-links li a ,.nav-links .mobile-item{
+        text-align: left;
+        padding: 0 10px;
+        display: block;
+        font-size: 20px;
+        color : #000000;
+      }
+      .nav-scrolled .nav-links li a{
+        color : #fff;
+      }
+      .nav-scrolled label.menu-btn i{
+        color : #333;
+        transition : .5s ease;
+      }
+
+      .navbar .drop-menu{
+        position: static;
+        opacity: 1;
+        top: 65px;
+        visibility: visible;
+        padding-left: 20px;
+        padding-top: -5px;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: all 0.3s ease;
+      }
+      .navbar nav ul ul li:hover{
+        padding : -5px 10px;
+      }
+
+      #showDrop:checked~.drop-menu,
+      #showMega:checked~.mega-box {
+        max-height: 100%;
+      }
+
+      .nav-links .desktop-item {
+        display: none;
+      }
+      .nav-links .mobile-item {
+        display: block;
+        transition: all 0.3s ease;
+      }
+      .nav-scrolled .nav-links li a{
+        color : #000000;
+      }
+      .nav-links .mobile-item:hover , .nav-links li a:hover{
+        background: #3A3B3C;
+        color : #fff;
+        padding: 10px 15px;
+      }
+      .dark .navbar .nav-links{
+        background: #000000;
+      }
+      .dark  .nav-links li a, .dark .mobile-item{
+        color :#f2f2f2;
+      }
+      .dark  .nav-links .mobile-item:hover ,.dark .nav-links li a:hover{
+        background: none;
+        color : #f2f2f2;
+        padding : 5px 10px;
+      }
+
+      .drop-menu li{
+        margin: 0;
+      }
+
+      
+    
+}
+
+
+/*For bigger phones */
+
+@media (max-width: 500px){
+    .working-content button{
+        margin-top: 40px;
+        padding : 17px 32px;
+        font-size : 16px;
+    }
+    .working-process .working-image{
+        height : 300px;
+        width : 100%;
+     }
+     .working-process .working-image img{
+        height : 200px;
+        width : 100%;
+     }
+     .preloader h2{
+        font-size : 28px;
+     }
+     .preloader span{
+        font-size: 14px;
+     }
+    .watch{
+        padding-left : 20px;
+        padding-top: 120px;;
+        height : 300px;
+    }
+    .watch h2 br{
+        display : none;
+    }
+    .watch h2{
+        font-size : 22px;
+    }
+    .slider{
+        padding-top : 200%;
+    }
+    section{
+        background-image: linear-gradient(45deg, #57d9eda1  0%, #FFF 35%, #fffaff 42%,#f18bf657  90%);
+    }
+    
+section.dark{
+    background-image: linear-gradient(45deg, #106179  0%, #000000 45%, #000000 65%,#8b353572 90%);
+}
+
+    .content{
+        padding-top: 200px;
+    }
+    .content .help{
+        padding: 15px 10px;
+        font-size: 18px;
+        font-weight : 400;
+        font-family: 'be vietnam pro', sans-serif;
+    }
+    .content h4{
+        font-size: 14px;
+    }
+    .content h1{
+        font-size : 46px;
+        font-weight: 700;
+    }
+    .content .help br{
+        display: none;
+    }
+   .navbar button.button-two {
+        padding : 8px 15px;
+        font-size: 14px;
+    }
+    .offers{
+        display : block;
+        margin-bottom: 50px;
+    }
+    .offers-two, .offers-three{
+        padding-top: 20px;
+    }
+    .clients, .latest-news{
+        
+        margin : 50px auto;
+    }
+    .clients .headers .main-header,
+ .latest-news .headers .main-header{
+    font-size: 28px;
+    font-weight: 500;
+}
+    .clients-body{
+        display: flex;
+        flex-direction: column-reverse;
+        padding :50px 0;
+        font-family: 'be vietnam pro',sans-serif;
+    }
+    .clients-body .client-country{
+        text-transform:uppercase ;
+        font-size : 18px;
+    }
+    .clients-body .client-review{
+        padding-top : 30px;
+        font-family : arial;
+        font-weight:-100px;
+        font-size : 24px;
+        line-height : 30px;
+        color :#2e2a2ab3;
+    }
+    .clients-body .client-name{
+        padding-top : 25px;
+        font-size : 18px;
+        font-weight: 500;
+    }
+    .clients-body .client-job{
+        padding-top : 15px;
+        font-style: italic;
+    }
+
+    .clients-body .clients-body-image img{
+       height : 90vw;
+       width  : 90vw;
+       display : block;
+       margin-right: auto;
+       margin-left: auto;
+     }
+
+
+    .latest-news .latest-news2 .card, .latest-news .latest-news2 .card-two{
+        width : 500px;
+     }
+     .latest-news .latest-news2 img{
+        height : auto;
+     }
+     .headers .header-impt{
+         text-align: center;
+     }
+     .headers .header-impt br{
+         display : none;
+     }
+    .purchase-menu{
+        padding : 1%;
+        margin : 100px 0;
+    }
+    .purchase-menu:hover{
+        transform: none;
+    }
+    .purchase-menu .purchase-header{
+        font-size: 8vw;
+    }
+    .purchase-impt{
+        font-size: 16px;
+    }
+    .footer .footer-nav1, .footer-nav2{
+        gap : 100px;
+    }
+    button.way svg{
+        width : 30px;
+        height : 30px;
+    }
+    hr.divider{
+        padding-top: 0px;
+    }
+    .footer-email{
+        padding-right: 0;
+        padding-top : 50px;
+    }
+    .footer-email form{
+        padding-top: 15px;
+}
+.footer-last{
+    display : block;;
+     padding : 20px 2%;
+    font-family: 'be vietnam pro', sans-serif;
+    font-size: 12px;
+
+}
+.footer-last ul{
+    display: flex;
+    gap : 10px;
+}
+.footer-last .copyright{
+    display : block;
+    text-align: left;
+    padding-top : 10px;
+}
+.btn-action .btn-contact{
+    margin-top : 10px;
+}
+}
+
+/*For smaller phones */
+@media (max-width : 350px){
+    .navbar{
+        padding : 1% 2% 1% 2%;
+    }
+    .navbar .btn.close-btn{
+        font-size : 22px;
+        padding : -5px 10px;
+    }
+    .navbar .toggle{
+        font-size: 18px;
+     }
+     .toggle{
+        margin-left: 2px;
+        margin-right: -2px;
+        padding : 5px 10px;
+     }
+    
+     .working-process .working-body{
+        margin-left: 20px;
+     }
+     .working-process .working-image{
+        height : 280px;
+        width : 100%;
+        padding : 20% 15% ;
+     }
+     .working-process .working-image img{
+        height : 150px;
+        width : 100%;
+     }
+     .preloader h2{
+        font-size : 24px;
+     }
+     .preloader span{
+        font-size: 12px;
+     }
+.watch h2{
+   font-size : 22px;
+   font-weight: 700;
+}
+.watch .svg-contain{
+    height : 60px;
+    width : 60px;
+    padding-top :15px;
+    padding-left : 17px;
+}
+.watch svg{
+    height : 30px;
+    width : 30px;
+    
+}
+    .navbar .brand-name{
+        font-size : 6.5vw;
+        margin-left : -2px;
+    }
+    .footer .brand-name{
+        font-size : 8vw;
+    }
+    .navbar .btn-logo, .footer .btn-logo{
+        padding : 1.5vw 3vw;
+        font-size: 20px;
+    }
+    .navbar button.button-two {
+        padding : 10px 12px;
+        font-size: 4vw;
+        font-weight:600;
+    }
+   .content {
+    padding-top: 150px;
+   }
+   .slider{
+    padding-top : 260%;
+   }
+   .dots{
+    bottom : 2%;
+   }
+   
+.content .help br{
+    display: none;
+}
+   .content h1{
+    font-size: 15vw;
+   }
+    .footer .footer-nav1, .footer-nav2{
+         gap: 70px;
+    }
+    .footer .brand{
+        padding-top: 30px;
+    }
+    .footer .brand-note{
+       margin-top: 0px;
+    }
+    .dark .footer .brand-note span{
+        margin-top: 0;
+        color : #fff;
+        line-height: 25px;
+    }
+    .footer .footer-nav1{
+        padding-top: 50px;
+    }
+    .nav1-header, .nav2-header{
+        font-size : 19px;
+    }
+    .footer-email{
+        padding-top: 50px;
+    }
+    .nav-1-one ol .nav-2-one ol{
+        padding-top: 16px;
+    }
+    .nav-1-one ol li, .nav-2-one ol li{
+        font-size: 15px;
+    }
+    .brand-note span br{
+        display: none;
+    }
+    .footer-email form{
+        padding-top: 20px;
+    }
+    button.way{
+        padding  : 8px 13px;
+        
+    }
+     .offers .offers-one-header{
+        font-size: 22px;
+    }
+    .footer-last ul{
+        display : block;
+        text-align: center;
+    }
+    .footer-last .copyright{
+        text-align : center;
+    }
+    .developer{
+        padding-left : 2%;
+        padding-right : 1%;
+    }
+    .btn-action .btn-contact{
+        margin-top: 10px;
+    }
+}
