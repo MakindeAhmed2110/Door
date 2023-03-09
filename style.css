@@ -4,6 +4,9 @@
     margin : 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behaviour : smooth;
+}
 section{
     transition: background 1s ;
     background-color: #fff;
@@ -1853,6 +1856,10 @@ section.dark{
     .navbar{
         padding : 1% 2% 1% 2%;
     }
+     .content h4{
+        font-size: 13px;
+         line-height : 15px;
+    }
     .navbar .btn.close-btn{
         font-size : 22px;
         padding : -5px 10px;
@@ -1967,7 +1974,7 @@ section.dark{
         padding-top: 20px;
     }
     button.way{
-        padding  : 8px 13px;
+        padding  : 8px 12px;
         
     }
      .offers .offers-one-header{
